@@ -2,7 +2,6 @@ echo 'You might need to change your default shell to zsh: `chsh -s /bin/zsh` (or
 
 dir="$HOME/.dotfiles"
 mkdir -p $dir
+git clone git://github.com/yanxiangw/dotfiles.git $dir
 cd $dir
-git clone git://github.com/yanxiangw/dotfiles.git
-cd dotfiles
 python mkdotfiles.py

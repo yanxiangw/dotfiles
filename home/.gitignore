@@ -1,0 +1,26 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*~
+
+# OS or Editor folders
+.AppleDouble
+.cache
+.DS_Store
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+Temporary Items
+*.swp
+
+# Folders to ignore
+.hg
+.svn
+
+# Project stuff
+*.sublime-project
+*.sublime-workspace
