@@ -10,6 +10,7 @@ SCRIPTS_DIR = os.path.join(DOTFILES_DIR, 'scripts')
 HOME_DIR = os.path.join(DOTFILES_DIR, 'home')
 GIT_IGNORE_FILE = os.path.join(os.environ['HOME'], '.gitconfig')
 PREZTO_DIR = os.path.join(DOTFILES_DIR, 'prezto')
+PREZTORC_FILE = os.path.join(DOTFILES_DIR, 'shell', 'zpreztorc')
 PREZTO_RUNCOMS_DIR = os.path.join(PREZTO_DIR, 'runcoms')
 
 print('Initializing dotfiles...')
@@ -30,3 +31,5 @@ for filename in os.listdir(PREZTO_RUNCOMS_DIR):
         home_file = os.path.join(os.environ['HOME'], '.' + filename)
         os.symlink(os.path.join(PREZTO_RUNCOMS_DIR, filename), home_file)
 os.symlink(PREZTO_DIR, os.path.join(os.environ['HOME'], '.zprezto'))
+os.unlink(os.path.join(os.environ['HOME'], '.zpreztorc'))
+os.symlink(PREZTORC_FILE, os.path.join(os.environ['HOME'], '.zpreztorc'))
